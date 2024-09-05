@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title> Motivational Message Application by Samiksha K </title>
+        <style> *{font-size: 40px; font-family: Calibri;}
+            body{background-color: azure;}
+        </style>
+    
+    </head>
+    <body>
+        <center>
+            <h1> Motivational Application </h1>
+            <form onsubmit="show()">
+                <input type="submit" value=" Show Message" />
+            </form>
+            <h2 id="msg"></h2>
+
+            <script>
+                function show()
+                {
+                    event.preventDefault();
+                    let msg = document.getElementById("msg");
+                    let messages = ["Believe in yourself" , "Never give up" , "Stay positive always" ,
+                     "Dream big dreams" , "Embrace the journey" , "Keep moving forward"];
+                    let r = parseInt(Math.random() * messages.length);
+                    msg.innerHTML = messages[r];
+                }
+            </script>
+        </center>
+    </body>
+</html>
